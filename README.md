@@ -1,7 +1,7 @@
 # sentiment-based-product-recommendation-system
 Using Machine learning for text classification and building a user collaborative recommendation system
 
-App is live on https://sharukhshaikh.herokuapp.com/ you can use username from user_final_rating.pkl for testing the application. You can use "00sab00" as test user also.
+you can use username from user_final_rating.pkl for testing the application. You can use "00sab00" as test user also.
 
 
 # The problem statement is as below
