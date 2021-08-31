@@ -25,7 +25,7 @@ class Recommendation:
         nltk.download('wordnet')
         self.data = pickle.load(open('data.pkl','rb'))
         self.user_final_rating = pickle.load(open('user_final_rating.pkl','rb'))
-        self.model = pickle.load(open('logistic_regression.pkl','rb'))
+        self.model = pickle.load(open('xgb_tuned.pkl','rb'))
         self.raw_data = pd.read_csv("sample30.csv")
         self.data = pd.concat([self.raw_data[['id','name','brand','categories','manufacturer']],self.data], axis=1)
         
