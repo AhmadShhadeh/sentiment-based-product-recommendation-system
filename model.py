@@ -25,7 +25,7 @@ class Recommendation:
         nltk.download('wordnet')
         self.data = pickle.load(open('data.pkl','rb'))
         self.user_final_rating = pickle.load(open('user_final_rating.pkl','rb'))
-        self.model = pickle.load(open('xgb_tuned.pkl','rb'))
+        self.model = pickle.load(open('xgb_model.pkl','rb'))
         self.raw_data = pd.read_csv("sample30.csv")
         self.data = pd.concat([self.raw_data[['id','name','brand','categories','manufacturer']],self.data], axis=1)
         
@@ -33,7 +33,7 @@ class Recommendation:
     def getTopProducts(self, user):
         items = self.user_final_rating.loc[user].sort_values(ascending=False)[0:20].index
         tfs=pd.read_pickle('tfidf.pkl')
-        #mdl=pd.read_pickle('final_lr.pkl')
+        #mdl=pd.read_pickle('final_xgb.pkl')
         #features = pickle.load(open('features.pkl','rb'))
         #vectorizer = TfidfVectorizer(vocabulary = features)
         temp=self.data[self.data.id.isin(items)]
@@ -50,7 +50,7 @@ class Recommendation:
     def getTopProductsNew(self, user):
         items = self.user_final_rating.loc[user].sort_values(ascending=False)[0:20].index
         tfs=pd.read_pickle('tfidf.pkl')
-        #mdl=pd.read_pickle('final_lr.pkl')
+        #mdl=pd.read_pickle('final_xgb.pkl')
         #features = pickle.load(open('features.pkl','rb'))
         #vectorizer = TfidfVectorizer(vocabulary = features)
         temp=self.data[self.data.id.isin(items)]
@@ -101,7 +101,7 @@ class Recommendation:
 
     def analyiseSentiment(self,text):
             tfs=pd.read_pickle('tfidf.pkl')
-            mdl=pd.read_pickle('final_lr.pkl')
+            mdl=pd.read_pickle('final_xgb.pkl')
             #preprocess text
 
             # remove html

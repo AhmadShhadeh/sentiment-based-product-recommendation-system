@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Fri Jul  2 17:59:52 2021
-
-@author: sharukh
 """
 
 """from model import Recommendation
 recommend = Recommendation()
-u='00sab00'
+u='speedlift'
 r=recommend.getTopProducts(u)
 print(r)"""
 
@@ -32,6 +29,6 @@ print(''.join(e+'|||' for e in s))
 
 #from model import Recommendation
 #recommend = Recommendation()
-#u='00sab00'
+#u='speedlift'
 #r=recommend.getUsers()
 #print(r)
