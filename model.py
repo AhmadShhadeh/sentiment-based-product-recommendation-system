@@ -33,7 +33,7 @@ class Recommendation:
     def getTopProducts(self, user):
         items = self.user_final_rating.loc[user].sort_values(ascending=False)[0:20].index
         tfs=pd.read_pickle('tfidf.pkl')
-        #mdl=pd.read_pickle('final_xgb.pkl')
+        #mdl=pd.read_pickle('final_lr.pkl')
         #features = pickle.load(open('features.pkl','rb'))
         #vectorizer = TfidfVectorizer(vocabulary = features)
         temp=self.data[self.data.id.isin(items)]
@@ -50,7 +50,7 @@ class Recommendation:
     def getTopProductsNew(self, user):
         items = self.user_final_rating.loc[user].sort_values(ascending=False)[0:20].index
         tfs=pd.read_pickle('tfidf.pkl')
-        #mdl=pd.read_pickle('final_xgb.pkl')
+        #mdl=pd.read_pickle('final_lr.pkl')
         #features = pickle.load(open('features.pkl','rb'))
         #vectorizer = TfidfVectorizer(vocabulary = features)
         temp=self.data[self.data.id.isin(items)]
@@ -101,7 +101,7 @@ class Recommendation:
 
     def analyiseSentiment(self,text):
             tfs=pd.read_pickle('tfidf.pkl')
-            mdl=pd.read_pickle('final_xgb.pkl')
+            mdl=pd.read_pickle('final_lr.pkl')
             #preprocess text
 
             # remove html
