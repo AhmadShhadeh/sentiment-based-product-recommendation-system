@@ -5,6 +5,8 @@ The e-commerce business is quite popular today. Here, you do not need to take or
 The App is up and runing ,you can access to the my project here:
 https://sentiment-bprs.herokuapp.com/
 
+all the source code and supported files in github: https://github.com/AhmadShhadeh/sentiment-based-product-recommendation-system
+
  
 
 Suppose you are working as a Machine Learning Engineer in an e-commerce company named 'Ebuss'. Ebuss has captured a huge market share in many fields, and it sells the products in various categories such as household essentials, books, personal care products, medicines, cosmetic items, beauty products, electrical appliances, kitchen and dining products and health care products.
